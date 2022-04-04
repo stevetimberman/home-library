@@ -8,6 +8,8 @@ packages = [{include = "home_library"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.75.1"}
+python-jose = "^3.3.0"
 
 
 [tool.poetry.group.dev.dependencies]
