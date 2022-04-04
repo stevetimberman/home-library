@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "home-library"
 version = "0.1.0"
-description = ""
+description = "App to manage my home library."
 authors = ["steventimberman <stevetimberman@gmail.com>"]
 readme = "README.md"
 packages = [{include = "home_library"}]
@@ -9,6 +9,18 @@ packages = [{include = "home_library"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.1"
+black = "^22.3.0"
+pre-commit = "^2.18.1"
+pytest-cov = "^3.0.0"
+coverage = "^6.3.2"
+mypy = "^0.942"
+isort = "^5.10.1"
+flake8 = "^4.0.1"
+blacken-docs = "^1.12.1"
+pytest-mock = "^3.7.0"
 
 [build-system]
 requires = ["poetry-core"]
