@@ -25,3 +25,11 @@ test:
 		--cov-report=term \
 		--cov-report=html:coverage-report \
 		tests/
+
+run_server:
+	uvicorn api.main:app --host 0.0.0.0 --port 5000 \
+	--log-level="debug" --reload \
+	--reload-exclude '.pytest_cache' \
+	--reload-exclude '.mypy_cache' \
+	--reload-exclude '.venv' \
+	--reload-exclude '.git'

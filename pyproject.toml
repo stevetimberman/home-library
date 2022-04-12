@@ -4,12 +4,30 @@ version = "0.1.0"
 description = "App to manage my home library."
 authors = ["steventimberman <stevetimberman@gmail.com>"]
 readme = "README.md"
-packages = [{include = "home_library"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastapi = {extras = ["all"], version = "^0.75.1"}
+
+[tool.poetry.group.api.dependencies]
 python-jose = "^3.3.0"
+python-dotenv = "^0.20.0"
+SQLAlchemy = "^1.4.35"
+psycopg2 = "^2.9.3"
+alembic = "^1.7.7"
+fastapi = "^0.75.1"
+uvicorn = {extras = ["standard"], version = "^0.17.6"}
+ujson = "^5.2.0"
+email-validator = "^1.1.3"
+requests = "^2.27.1"
+Jinja2 = "^3.1.1"
+python-multipart = "^0.0.5"
+itsdangerous = "^2.1.2"
+PyYAML = "^6.0"
+orjson = "^3.6.7"
+tenacity = "^8.0.1"
+
+[tool.poetry.group.home_library.dependencies]
+pyzotero = "^1.5.2"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -27,3 +45,6 @@ pytest-mock = "^3.7.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
