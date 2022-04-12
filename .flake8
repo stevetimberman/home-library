@@ -7,3 +7,5 @@ exclude =
     .git,
     __pycache__,
     */tests/conftest.py
+per-file-ignores =
+    */db/base.py: F401
