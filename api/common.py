@@ -2,6 +2,7 @@
 
 Examples include authentication related functions.
 """
+
 from api.db.database import SessionLocal
 
 
