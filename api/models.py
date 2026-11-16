@@ -1,4 +1,5 @@
 """Defines SQLAlchemy models."""
+
 from sqlalchemy import Column, Integer, String
 
 from api.db.base_class import Base
